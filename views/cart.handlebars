@@ -20,7 +20,7 @@
             href="{{inventoryId}}"
             class="cart-item-info">
     <!-- replace with product image -->
-            <img src="{{image}}" alt="{{name}}" />
+            <img src="{{inventory.image}}" alt="{{inventory.name}}" />
             <div>
     <!-- replace with product name and price -->
               <p>{{name}}</p>
@@ -47,11 +47,11 @@
               </button>
             </div>
 <!-- replace with calculatedPrice -->
-            <p>{{calculatedPrice}}</p>
+            <p>${{calculatedPrice}}</p>
           </div>
         </div>
         <hr />
-    {{/each}}
+     {{/each}}
 <!-- TODO: 👆Use a handlebars each helper to loop over cart items👆 -->
       <div class="cart-total">
         <p>Total:</p>
@@ -59,8 +59,8 @@
         <p>{{total}}</p>
       </div>
       <button id="emptyCart">Empty Cart</button>
-      
     </div>
+
   </section>
 </main>
 <footer>
