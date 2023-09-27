@@ -42,7 +42,7 @@ router.get('/cart', async (req, res) => {
     .toFixed(2)
 
   // TODO: Convert the response below to render a handlebars template
-  res.render ('cart', {total, cartCount}) 
+  res.render ('cart', {total, cartItems}) 
 })
 
 module.exports = router
