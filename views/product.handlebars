@@ -9,16 +9,17 @@
 </header>
 <main>
   <section id="product-container">
+    {{#with product}}
     <!-- replace with product image and name -->
     <img src="/images/{{image}}" alt="{{name}}"/>
     <!-- replace form action id # with product id -->
-      <form method="POST" action="/api/cart?inventoryId={{product.id}}">
+      <form method="POST" action="/api/cart?inventoryId={{id}}">
         <!-- replace with product name -->
-        <h2>{{product.name}}</h2>
+        <h2>{{name}}</h2>
         <!-- replace with product description -->
-        <p>{{product.description}}</p>
+        <p>{{description}}</p>
         <!-- replace with product price -->
-        <p>${{product.price}}</p>
+        <p>${{price}}</p>
         <label for="quantity-input">
           Quantity
     <!-- replace max input attribute with quantity -->
@@ -32,6 +33,7 @@
         </label>
         <button>Add to Cart</button>
       </form>
+    {{/with}}
   </section>
   <a href="/" id="returnToStore">Return to Store Page</a>
 </main>
