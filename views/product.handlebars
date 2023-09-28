@@ -10,15 +10,15 @@
 <main>
   <section id="product-container">
     <!-- replace with product image and name -->
-    <img src="{{image}}" alt="{{name}}"/>
+    <img src="/images/{{image}}" alt="{{name}}" />
     <!-- replace form action id # with product id -->
-      <form method="POST" action="/api/cart?inventoryId={{inventoryId}}">
+      <form method="POST" action="/api/cart?inventoryId={{id}}">
         <!-- replace with product name -->
         <h2>{{name}}</h2>
         <!-- replace with product description -->
         <p>{{description}}</p>
         <!-- replace with product price -->
-        <p>{{price}}</p>
+        <p>${{price}}</p>
         <label for="quantity-input">
           Quantity
     <!-- replace max input attribute with quantity -->
